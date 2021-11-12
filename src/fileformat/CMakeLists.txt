@@ -80,6 +80,8 @@ add_library(retdec::fileformat ALIAS fileformat)
 target_compile_features(fileformat PUBLIC cxx_std_17)
 
 target_include_directories(fileformat
+	PRIVATE
+		$<BUILD_INTERFACE:${CMAKE_BINARY_DIR}/deps/openssl/openssl/src/openssl-install/include>
 	PUBLIC
 		$<BUILD_INTERFACE:${RETDEC_INCLUDE_DIR}>
 		$<INSTALL_INTERFACE:${RETDEC_INSTALL_INCLUDE_DIR}>

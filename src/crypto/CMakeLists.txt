@@ -9,6 +9,8 @@ add_library(retdec::crypto ALIAS crypto)
 target_compile_features(crypto PUBLIC cxx_std_17)
 
 target_include_directories(crypto
+	PRIVATE
+		$<BUILD_INTERFACE:${CMAKE_BINARY_DIR}/deps/openssl/openssl/src/openssl-install/include>
 	PUBLIC
 		$<BUILD_INTERFACE:${RETDEC_INCLUDE_DIR}>
 		$<INSTALL_INTERFACE:${RETDEC_INSTALL_INCLUDE_DIR}>
