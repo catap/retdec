@@ -35,13 +35,13 @@ set(LLVM_ARCHIVE_SHA256
     CACHE INTERNAL ""
 )
 
-# Commit for tag 1.1.1c
+# Commit for tag 1.1.1l
 set(OPENSSL_URL
-    "https://github.com/openssl/openssl/archive/97ace46e11dba4c4c2b7cb67140b6ec152cfaaf4.zip"
+    "https://github.com/openssl/openssl/archive/fb047ebc87b18bdc4cf9ddee9ee1f5ed93e56aff.zip"
     CACHE INTERNAL "URL of OpenSSL archive to use."
 )
 set(OPENSSL_ARCHIVE_SHA256
-    "f093df5cfd7521d8f6a09f250d7e69159d1001c47419130e806488de8a6312d8"
+    "04991d67b8be8f5f86ff01cc7f1cdf1501059beacecf5292a22f941102df0966"
     CACHE INTERNAL ""
 )
 

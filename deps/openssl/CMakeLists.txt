@@ -99,6 +99,8 @@ elseif(OS_DARWIN)
 		set(OPENSSL_CONFIGURE_ARCH "darwin-i386-cc")
 	elseif(ARCH_X64)
 		set(OPENSSL_CONFIGURE_ARCH "darwin64-x86_64-cc")
+	elseif(ARCH_ARM64)
+		set(OPENSSL_CONFIGURE_ARCH "darwin64-arm64-cc")
 	endif()
 endif()
 
@@ -110,7 +112,7 @@ endif()
 set(OPENSSL_PREFIX         "${CMAKE_CURRENT_BINARY_DIR}/openssl")
 set(OPENSSL_SRC_DIR        "${OPENSSL_PREFIX}/src/openssl")
 set(OPENSSL_INSTALL_DIR    "${OPENSSL_PREFIX}/src/openssl-install")
-set(OPENSSL_VERSION        "1.1.1c")
+set(OPENSSL_VERSION        "1.1.1l")
 set(OPENSSL_DOWNLOAD_NAME  "openssl.tar.gz")
 
 set(OPENSSL_CONFIGURE_OPTIONS
