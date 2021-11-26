@@ -29,7 +29,7 @@ if(MSVC)
 	set(YARAC_PATH         ${YARA_WIN_DIR}/\${CMAKE_INSTALL_CONFIG_NAME}/${YARAC_NAME})
 else()
 	set(YARA_LIBRARY_DIR ${YARA_DIR}/libyara/.libs)
-	set(YARA_BUILD_COMMAND make -j${CPUS})
+	set(YARA_BUILD_COMMAND ${CMAKE_MAKE_PROGRAM} -j${CPUS})
 	set(YARAC_PATH         ${YARA_DIR}/yarac)
 endif()
 
