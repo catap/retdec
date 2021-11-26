@@ -6,6 +6,8 @@ add_library(crypto STATIC
 )
 add_library(retdec::crypto ALIAS crypto)
 
+find_package(OpenSSL 1.1.1 REQUIRED)
+
 target_compile_features(crypto PUBLIC cxx_std_17)
 
 target_include_directories(crypto
@@ -15,10 +17,9 @@ target_include_directories(crypto
 )
 
 target_link_libraries(crypto
-	PUBLIC
-		retdec::deps::openssl-crypto
 	PRIVATE
 		retdec::utils
+		OpenSSL::Crypto
 )
 
 set_target_properties(crypto

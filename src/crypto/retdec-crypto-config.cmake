@@ -5,7 +5,6 @@ if(NOT TARGET retdec::crypto)
         REQUIRED
         COMPONENTS
             utils
-            openssl-crypto
     )
 
     include(${CMAKE_CURRENT_LIST_DIR}/retdec-crypto-targets.cmake)
